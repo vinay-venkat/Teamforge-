@@ -1,4 +1,4 @@
-# ⚒️ TeamForge — Build Teams That Win
+# 🫱🫲TeamForge — Build Teams That Win
 
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=27&pause=1000&color=8B5CF6&center=true&vCenter=true&width=700&lines=Find+Your+Perfect+Hackathon+Team;Balance+Skills.+Build+Synergy.;Turn+Great+Ideas+Into+Winning+Projects." alt="TeamForge animated tagline" />
