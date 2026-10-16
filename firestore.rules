@@ -1,0 +1,25 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Connection health check document
+    match /test/{docId} {
+      allow read: if true;
+    }
+
+    // Student / User Profiles
+    match /users/{userId} {
+      allow read: if true;
+      allow create, update: if request.auth != null && request.auth.uid == userId;
+      allow delete: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // Projects and Hackathon Teams
+    match /projects/{projectId} {
+      allow read: if true;
+      allow create: if request.auth != null;
+      allow update: if request.auth != null;
+      allow delete: if request.auth != null && (resource == null || resource.data.ownerId == request.auth.uid);
+    }
+  }
+}

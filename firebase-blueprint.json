@@ -1,0 +1,52 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "Student or collaborator profile information",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "avatar": { "type": "string" },
+        "university": { "type": "string" },
+        "major": { "type": "string" },
+        "specialty": { "type": "string" },
+        "bio": { "type": "string" },
+        "experienceLevel": { "type": "string" },
+        "availability": { "type": "string" },
+        "hoursPerWeek": { "type": "number" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "name", "email", "specialty", "university"]
+    },
+    "Project": {
+      "title": "Project",
+      "description": "Hackathon or student team project",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "tagline": { "type": "string" },
+        "description": { "type": "string" },
+        "category": { "type": "string" },
+        "ownerId": { "type": "string" },
+        "ownerName": { "type": "string" },
+        "targetTeamSize": { "type": "number" },
+        "stage": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "title", "ownerId", "ownerName", "category"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "User profiles indexed by UID"
+    },
+    "/projects/{projectId}": {
+      "schema": "Project",
+      "description": "Projects created by students and team leads"
+    }
+  }
+}

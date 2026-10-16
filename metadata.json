@@ -1,0 +1,6 @@
+{
+  "name": "TeamForge - Student Collaborator & Team Matcher",
+  "description": "A collaborative platform for students to discover and form balanced, multidisciplinary teams for hackathons, research, competitions, and startup projects.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
